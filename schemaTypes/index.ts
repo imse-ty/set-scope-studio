@@ -1,6 +1,5 @@
 import blockContent from './blockContent'
-import category from './category'
-import post from './post'
-import author from './author'
+import role from './role'
+import vimeo from './vimeo'
 
-export const schemaTypes = [post, author, category, blockContent]
+export const schemaTypes = [role, blockContent, vimeo]
