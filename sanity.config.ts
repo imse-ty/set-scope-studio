@@ -18,6 +18,8 @@ export default defineConfig({
           .title('Content')
           .items([
             // Minimum required configuration
+            S.documentTypeListItem('client'),
+            S.documentTypeListItem('proposal'),
             orderableDocumentListDeskItem({type: 'role', S, context}),
           ])
       },
