@@ -96,6 +96,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'password',
+      title: 'Password',
+      type: 'string',
+      description: 'Set a password for this page (leave empty for no protection)',
+    }),
+    defineField({
       name: 'sections',
       title: 'Page sections',
       type: 'array',
