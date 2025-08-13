@@ -131,6 +131,18 @@ export default defineType({
         defineArrayMember({
           type: 'proposalSection',
         }),
+        defineArrayMember({
+          type: 'proposalPricingTable',
+        }),
+        defineArrayMember({
+          type: 'proposalStructure',
+        }),
+        defineArrayMember({
+          type: 'proposalPeople',
+        }),
+        defineArrayMember({
+          type: 'proposalExecutiveSummary',
+        }),
       ],
     }),
     defineField({
