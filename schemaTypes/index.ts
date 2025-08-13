@@ -1,5 +1,6 @@
 import blockContent from './blockContent'
 import client from './client'
+import project from './project'
 import proposal from './proposal'
 import proposalCaseStudy from './proposal/proposalCaseStudy'
 import proposalChallenge from './proposal/proposalChallenge'
@@ -22,6 +23,7 @@ export const schemaTypes = [
   client,
   blockContent,
   vimeo,
+  project,
   proposalChallenge,
   proposalMotionDesignApproach,
   proposalPricing,

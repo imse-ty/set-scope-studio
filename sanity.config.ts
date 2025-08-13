@@ -21,6 +21,7 @@ export default defineConfig({
             S.documentTypeListItem('client'),
             S.documentTypeListItem('proposal'),
             orderableDocumentListDeskItem({type: 'role', S, context}),
+            S.documentTypeListItem('project'),
           ])
       },
     }),
