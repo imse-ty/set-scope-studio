@@ -9,7 +9,7 @@ export default defineConfig({
   title: 'Set Scope',
 
   projectId: 'ccltdabq',
-  dataset: 'production',
+  dataset: 'staging',
 
   plugins: [
     structureTool({
