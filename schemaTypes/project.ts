@@ -26,6 +26,22 @@ export default defineType({
       rows: 5,
     }),
     defineField({
+      name: 'cover',
+      title: 'Cover',
+      type: 'image',
+      fields: [
+        {
+          title: 'Alternative text',
+          name: 'alt',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'videoUrl',
       title: 'Video URL',
       type: 'url',
@@ -84,20 +100,10 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'cover',
-      title: 'Cover',
-      type: 'image',
-      fields: [
-        {
-          title: 'Alternative text',
-          name: 'alt',
-          type: 'string',
-          validation: (Rule) => Rule.required(),
-          options: {
-            isHighlighted: true,
-          },
-        },
-      ],
+      title: 'Body',
+      name: 'body',
+      type: 'array',
+      of: [{type: 'block'}],
     }),
   ],
 
