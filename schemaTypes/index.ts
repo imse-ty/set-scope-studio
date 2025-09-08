@@ -1,6 +1,7 @@
 import blockContent from './blockContent'
 import client from './client'
 import project from './project'
+import projectCallout from './project/projectCallout'
 import proposal from './proposal'
 import proposalCaseStudy from './proposal/proposalCaseStudy'
 import proposalChallenge from './proposal/proposalChallenge'
@@ -36,4 +37,5 @@ export const schemaTypes = [
   proposalStructure,
   proposalPeople,
   proposalExecutiveSummary,
+  projectCallout,
 ]

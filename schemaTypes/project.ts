@@ -102,8 +102,7 @@ export default defineType({
     defineField({
       title: 'Body',
       name: 'body',
-      type: 'array',
-      of: [{type: 'block'}],
+      type: 'blockContent',
     }),
   ],
 

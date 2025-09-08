@@ -73,5 +73,8 @@ export default defineType({
     defineArrayMember({
       type: 'vimeo',
     }),
+    defineArrayMember({
+      type: 'projectCallout',
+    }),
   ],
 })
