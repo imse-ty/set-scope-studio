@@ -3,14 +3,17 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
+import {presentationTool} from 'sanity/presentation'
 
 export default defineConfig({
   name: 'default',
   title: 'Set Scope',
-
   projectId: 'ccltdabq',
   dataset: 'staging',
-
+  corsOrigins: [
+    'http://localhost:5173', // local dev
+    'https://setangle.com', // your deployed frontend
+  ],
   plugins: [
     structureTool({
       structure: (S, context) => {
@@ -23,6 +26,15 @@ export default defineConfig({
             orderableDocumentListDeskItem({type: 'role', S, context}),
             S.documentTypeListItem('project'),
           ])
+      },
+    }),
+    presentationTool({
+      previewUrl: {
+        origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:5173',
+        previewMode: {
+          enable: '/preview/enable',
+          disable: '/preview/disable',
+        },
       },
     }),
     visionTool(),
