@@ -9,7 +9,7 @@ export default defineConfig({
   name: 'default',
   title: 'Set Scope',
   projectId: 'ccltdabq',
-  dataset: 'production',
+  dataset: process.env.SANITY_STUDIO_API_DATASET || 'staging',
   corsOrigins: [
     'http://localhost:5173', // local dev
     'https://setangle.com', // your deployed frontend
