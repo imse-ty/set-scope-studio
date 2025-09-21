@@ -57,29 +57,6 @@ export default defineType({
       type: 'url',
     }),
     defineField({
-      name: 'stats',
-      title: 'Stats',
-      type: 'array',
-      of: [
-        {
-          name: 'statItem',
-          title: 'Stat Item',
-          type: 'object',
-          fields: [
-            defineField({name: 'prefix', title: 'Prefix', type: 'string'}),
-            defineField({name: 'stat', title: 'Stat', type: 'string'}), // or 'number'
-            defineField({name: 'suffix', title: 'Suffix', type: 'string'}),
-          ],
-          preview: {
-            select: {prefix: 'prefix', stat: 'stat', suffix: 'suffix'},
-            prepare: ({prefix, stat, suffix}) => ({
-              title: `${prefix ?? ''}${stat ?? ''}${suffix ?? ''}`.trim(),
-            }),
-          },
-        },
-      ],
-    }),
-    defineField({
       name: 'info',
       title: 'Info items',
       type: 'array',
@@ -107,6 +84,29 @@ export default defineType({
             },
           },
         }),
+      ],
+    }),
+    defineField({
+      name: 'stats',
+      title: 'Stats',
+      type: 'array',
+      of: [
+        {
+          name: 'statItem',
+          title: 'Stat Item',
+          type: 'object',
+          fields: [
+            defineField({name: 'prefix', title: 'Prefix', type: 'string'}),
+            defineField({name: 'stat', title: 'Stat', type: 'string'}), // or 'number'
+            defineField({name: 'suffix', title: 'Suffix', type: 'string'}),
+          ],
+          preview: {
+            select: {prefix: 'prefix', stat: 'stat', suffix: 'suffix'},
+            prepare: ({prefix, stat, suffix}) => ({
+              title: `${prefix ?? ''} ${stat ?? ''} ${suffix ?? ''}`.trim(),
+            }),
+          },
+        },
       ],
     }),
     defineField({
