@@ -1,9 +1,11 @@
 import {orderRankField} from '@sanity/orderable-document-list'
+import {MdWorkOutline} from 'react-icons/md'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'role',
-  title: 'Role',
+  title: 'Jobs',
+  icon: MdWorkOutline,
   type: 'document',
   fields: [
     defineField({

@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {presentationTool} from 'sanity/presentation'
+import {MdOutlineImage, MdWorkOutline} from 'react-icons/md'
 
 export default defineConfig({
   name: 'default',
@@ -17,10 +18,22 @@ export default defineConfig({
           .title('Content')
           .items([
             // Minimum required configuration
+            orderableDocumentListDeskItem({
+              icon: MdOutlineImage,
+              title: 'Projects',
+              type: 'project',
+              S,
+              context,
+            }),
             S.documentTypeListItem('client'),
             S.documentTypeListItem('proposal'),
-            orderableDocumentListDeskItem({type: 'role', S, context}),
-            S.documentTypeListItem('project'),
+            orderableDocumentListDeskItem({
+              title: 'Jobs',
+              icon: MdWorkOutline,
+              type: 'role',
+              S,
+              context,
+            }),
           ])
       },
     }),

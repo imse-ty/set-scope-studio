@@ -1,8 +1,11 @@
+import {orderRankField} from '@sanity/orderable-document-list'
+import {MdOutlineImage} from 'react-icons/md'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'project',
-  title: 'Project',
+  icon: MdOutlineImage,
+  title: 'Projects',
   type: 'document',
   fields: [
     defineField({
@@ -46,6 +49,8 @@ export default defineType({
           title: 'Alternative text',
           name: 'alt',
           type: 'string',
+          description:
+            'Write a short three-five word description of this image for SEO and accessibility.',
           validation: (Rule) => Rule.required(),
           options: {
             isHighlighted: true,
@@ -57,6 +62,7 @@ export default defineType({
       name: 'videoUrl',
       title: 'Video URL',
       type: 'url',
+      description: 'YouTube or Vimeo video URL.',
     }),
     defineField({
       name: 'info',
@@ -117,12 +123,14 @@ export default defineType({
       type: 'array',
       of: [{type: 'block'}],
     }),
+    orderRankField({type: 'project'}),
   ],
 
   preview: {
     select: {
       title: 'title',
       subtitle: 'subtitle',
+      media: 'cover',
     },
   },
 })

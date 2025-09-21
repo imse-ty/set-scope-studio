@@ -1,9 +1,11 @@
+import {MdOutlineStickyNote2} from 'react-icons/md'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'proposal',
-  title: 'Proposal',
+  title: 'Proposals',
   type: 'document',
+  icon: MdOutlineStickyNote2,
   fields: [
     defineField({
       name: 'client',

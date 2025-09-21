@@ -1,8 +1,10 @@
+import {MdOutlinePerson} from 'react-icons/md'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'client',
-  title: 'Client',
+  title: 'Clients',
+  icon: MdOutlinePerson,
   type: 'document',
   fields: [
     defineField({
