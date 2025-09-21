@@ -18,6 +18,8 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      description:
+        'A unique identifier for the project. Hint: Hit "Generate" to auto-fill from title.',
       validation: (Rule) =>
         Rule.required().custom((slug) => {
           if (typeof slug === 'undefined') return true
