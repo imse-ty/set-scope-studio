@@ -14,4 +14,7 @@ export default defineType({
       description: 'Paste a link to the content you want to display on your post',
     }),
   ],
+  preview: {
+    select: {title: 'url'},
+  },
 })
