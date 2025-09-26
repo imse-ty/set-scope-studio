@@ -121,7 +121,7 @@ export default defineType({
       title: 'Body',
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'blockContent'}],
     }),
     orderRankField({type: 'project'}),
   ],
