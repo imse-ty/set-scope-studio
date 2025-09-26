@@ -1,6 +1,7 @@
 import blockContent from './blockContent'
 import client from './client'
 import project from './project'
+import projectCallout from './project/projectCallout'
 import proposal from './proposal'
 import proposalCaseStudy from './proposal/proposalCaseStudy'
 import proposalChallenge from './proposal/proposalChallenge'
@@ -18,12 +19,19 @@ import role from './role'
 import vimeo from './vimeo'
 
 export const schemaTypes = [
-  role,
-  proposal,
-  client,
+  // General
   blockContent,
   vimeo,
+
+  // Project
   project,
+  projectCallout,
+
+  // Client
+  client,
+
+  // Proposal
+  proposal,
   proposalChallenge,
   proposalMotionDesignApproach,
   proposalPricing,
@@ -36,4 +44,7 @@ export const schemaTypes = [
   proposalStructure,
   proposalPeople,
   proposalExecutiveSummary,
+
+  // Role
+  role,
 ]

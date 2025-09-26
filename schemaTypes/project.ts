@@ -120,8 +120,7 @@ export default defineType({
     defineField({
       title: 'Body',
       name: 'body',
-      type: 'array',
-      of: [{type: 'blockContent'}],
+      type: 'blockContent',
     }),
     orderRankField({type: 'project'}),
   ],

@@ -1,4 +1,5 @@
-import {defineType, defineArrayMember} from 'sanity'
+import {MdOutlineImage} from 'react-icons/md'
+import {defineType, defineArrayMember, defineField} from 'sanity'
 
 /**
  * This is the schema definition for the rich text fields used for
@@ -67,7 +68,24 @@ export default defineType({
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     defineArrayMember({
+      type: 'projectCallout',
+    }),
+    defineArrayMember({
       type: 'image',
+      icon: MdOutlineImage,
+      fields: [
+        {
+          title: 'Alternative text',
+          name: 'alt',
+          type: 'string',
+          description:
+            'Write a short three-five word description of this image for SEO and accessibility.',
+          validation: (Rule) => Rule.required(),
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       options: {hotspot: true},
     }),
     defineArrayMember({

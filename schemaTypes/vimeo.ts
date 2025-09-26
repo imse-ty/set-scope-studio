@@ -1,8 +1,10 @@
 import {defineField, defineType} from 'sanity'
+import {FaVimeo} from 'react-icons/fa'
 
 export default defineType({
   name: 'vimeo',
   title: 'Vimeo',
+  icon: FaVimeo,
   type: 'object',
   fields: [
     defineField({
