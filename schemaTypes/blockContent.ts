@@ -80,7 +80,6 @@ export default defineType({
           type: 'string',
           description:
             'Write a short three-five word description of this image for SEO and accessibility.',
-          validation: (Rule) => Rule.required(),
           options: {
             isHighlighted: true,
           },
