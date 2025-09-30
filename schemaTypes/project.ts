@@ -39,7 +39,7 @@ export default defineType({
       title: 'Subtitle',
       type: 'string',
       description: 'A short three-five word description of the project, used for the home page.',
-      validation: (rule) => rule.max(80),
+      validation: (rule) => rule.max(50),
     }),
     defineField({
       name: 'cover',
