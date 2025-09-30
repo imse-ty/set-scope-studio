@@ -5,6 +5,7 @@ import {schemaTypes} from './schemaTypes'
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {presentationTool} from 'sanity/presentation'
 import {MdOutlineImage, MdWorkOutline} from 'react-icons/md'
+import {locations, mainDocuments} from './lib/presentation/resolve'
 
 export default defineConfig({
   name: 'default',
@@ -38,13 +39,15 @@ export default defineConfig({
       },
     }),
     presentationTool({
+      resolve: {locations, mainDocuments},
       previewUrl: {
-        origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:5173',
+        initial: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:5173',
         previewMode: {
           enable: '/preview/enable',
           disable: '/preview/disable',
         },
       },
+      allowOrigins: ['http://localhost:*'],
     }),
     visionTool(),
   ],
