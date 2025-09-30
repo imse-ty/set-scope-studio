@@ -37,8 +37,9 @@ export default defineType({
     defineField({
       name: 'subtitle',
       title: 'Subtitle',
-      type: 'text',
-      rows: 5,
+      type: 'string',
+      description: 'A short three-five word description of the project, used for the home page.',
+      validation: (rule) => rule.max(80),
     }),
     defineField({
       name: 'cover',
@@ -62,6 +63,14 @@ export default defineType({
       title: 'Video URL',
       type: 'url',
       description: 'YouTube or Vimeo video URL.',
+    }),
+    defineField({
+      name: 'summary',
+      title: 'Summary',
+      type: 'text',
+      rows: 5,
+      description:
+        'A quick, two-three sentence long summary of the project, aimed for the solution and final outcome AKA "Key points" section.',
     }),
     defineField({
       name: 'info',
