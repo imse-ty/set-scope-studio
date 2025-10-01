@@ -58,6 +58,9 @@ export default defineType({
       options: {hotspot: true},
     }),
     defineArrayMember({
+      type: 'projectGallery',
+    }),
+    defineArrayMember({
       type: 'vimeo',
     }),
   ],

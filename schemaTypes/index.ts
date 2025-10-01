@@ -2,6 +2,7 @@ import blockContent from './blockContent'
 import client from './client'
 import project from './project'
 import projectCallout from './project/projectCallout'
+import projectGallery from './project/projectGallery'
 import proposal from './proposal'
 import proposalCaseStudy from './proposal/proposalCaseStudy'
 import proposalChallenge from './proposal/proposalChallenge'
@@ -26,6 +27,7 @@ export const schemaTypes = [
   // Project
   project,
   projectCallout,
+  projectGallery,
 
   // Client
   client,
